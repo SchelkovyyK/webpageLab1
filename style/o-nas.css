@@ -1,47 +1,20 @@
-.slider {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  margin: 0 auto;
+main{
+  /* padding: 20px; */
+  margin: 0 auto ;
+}
+#movies {
+  width:90vw;
+  margin: 30px auto;
+  display: grid;
+   grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap:20px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
+#movies > div {
+  border: 1px solid black;
+  text-align: center;
 }
-
-.slide {
-  min-width: 100%;
-  transition: opacity 0.5s ease;
-}
-
-.slide img {
+#movies > div > img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-button.prev,
-button.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 30px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-button.prev {
-  left: 10px;
-}
-
-button.next {
-  right: 10px;
+  /* object-fit: cover; */
 }
