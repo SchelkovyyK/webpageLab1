@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setupSlider(slider) {
   const slides = slider.querySelector(".slides");
-  const slideCount = slides.children.length - 2; // ignore cloned slides
+  const slideCount = slides.children.length - 2; 
   const prevBtn = slider.querySelector(".prev");
   const nextBtn = slider.querySelector(".next");
 

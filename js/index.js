@@ -15,6 +15,4 @@ box.addEventListener("mousemove", (e) => {
 box.addEventListener("mouseleave", () => {
   box.style.backgroundPosition = "center";
 });
-
-// todo SLider
  

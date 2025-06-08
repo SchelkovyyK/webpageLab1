@@ -1,0 +1,27 @@
+main{
+  margin: 0 auto ;
+}
+#movies {
+  width:90vw;
+  margin: 30px auto;
+  display: grid;
+   grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap:20px;
+  overflow: hidden;
+}
+#movies > div {
+  border: 1px solid black;
+  text-align: center;
+}
+#movies > div > img{
+  width: 100%;
+  /* object-fit: cover; */
+}
+#loadMoreBtn{
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
