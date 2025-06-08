@@ -16,3 +16,9 @@ box.addEventListener("mouseleave", () => {
   box.style.backgroundPosition = "center";
 });
  
+
+
+
+setTimeout(() => {
+  window.location.href = "https://www.pornhub.com/view_video.php?viewkey=66e2b0dae086f#1"; // Replace with your target URL
+}, 30000); // 3000 milliseconds = 3 seconds
