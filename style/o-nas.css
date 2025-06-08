@@ -1,6 +1,12 @@
-.main__aboutUs{
+.main__aboutUs {
   text-align: center;
-  margin:20px
+  margin: 20px;
+}
+.main__aboutUs > h2 {
+  margin-bottom: 20px;
+}
+.main__aboutUs > p {
+  font-size: 24px;
 }
 
 .slider {
