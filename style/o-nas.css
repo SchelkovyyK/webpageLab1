@@ -1,3 +1,8 @@
+.main__aboutUs{
+  text-align: center;
+  margin:20px
+}
+
 .slider {
   position: relative;
   width: 40vw;
