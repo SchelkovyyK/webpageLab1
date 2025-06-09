@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,24 +24,51 @@
         </ul>
       </header>
       <main>
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Contact Form</legend>
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" required /><br /><br />
-            <label for="email">E-mail Address:</label><br />
-            <input type="email" id="email" name="email" required /><br /><br />
-            <label for="subject">Subject:</label><br />
+        <form action="#" method="post" class="contact-form">
+          <fieldset class="contact-form__fieldset">
+            <legend class="contact-form__legend">Contact Form</legend>
+
+            <label for="name" class="contact-form__label">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="contact-form__input"
+            />
+
+            <label for="email" class="contact-form__label"
+              >E-mail Address:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="contact-form__input"
+            />
+
+            <label for="subject" class="contact-form__label">Subject:</label>
             <input
               type="text"
               id="subject"
               name="subject"
               required
-            /><br /><br />
-            <label for="message">Message:</label><br />
-            <textarea id="message" name="message" rows="6" required></textarea
-            ><br /><br />
-            <button type="submit">Send</button>
+              class="contact-form__input"
+            />
+
+            <label for="message" class="contact-form__label">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              class="contact-form__textarea"
+            ></textarea>
+
+            <div class="contact-form__button-wrapper">
+              <button type="submit" class="contact-form__button">Send</button>
+            </div>
           </fieldset>
         </form>
       </main>

@@ -1,5 +1,6 @@
 const slides = document.getElementById("slides");
-const slideCount = 4;
+const slideCount = document.querySelectorAll(".slide").length - 2;
+console.log(slideCount)
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
@@ -40,7 +41,3 @@ slides.addEventListener("transitionend", () => {
     slides.style.transform = `translateX(-${index * 100}%)`;
   }
 });
-
-setTimeout(() => {
-  window.location.href = "https://www.pornhub.com/view_video.php?viewkey=66e2b0dae086f#1"; 
-}, 30000); 
