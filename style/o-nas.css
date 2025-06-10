@@ -8,6 +8,12 @@
 .main__aboutUs > p {
   font-size: 24px;
 }
+.sendMeSwitcher{
+  margin-top:20px ;
+  padding: 10px;
+  color: #fff;
+  transition: 0.5s;
+}
 
 .slider {
   position: relative;
@@ -54,3 +60,5 @@ button.prev {
 button.next {
   right: 10px;
 }
+
+
