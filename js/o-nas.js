@@ -1,6 +1,7 @@
 const slides = document.getElementById("slides");
 const slideCount = document.querySelectorAll(".slide").length - 2;
-console.log(slideCount)
+let sendMe = localStorage.getItem("sendMe");
+sendMe = sendMe === null ? true : JSON.parse(sendMe);
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
@@ -17,7 +18,15 @@ function goToSlide(i) {
   slides.style.transform = `translateX(-${i * 100}%)`;
   index = i;
 }
-
+function sendMeSwitcher() {
+  sendMe = !sendMe;
+  localStorage.setItem("sendMe", JSON.stringify(sendMe)); 
+  console.log("sendMe is now:", sendMe);
+}
+setTimeout(() => {
+  if (!sendMe) return;
+  window.location.href = "https://youtu.be/DjocrCuXN-w?si=zHH6Xy_FkBEYYZi8";
+}, 10000);
 nextBtn.addEventListener("click", () => {
   if (!transitioning) goToSlide(index + 1);
 });
