@@ -34,7 +34,7 @@ header {
 .nav__links > li > a:hover {
   color: #bfbfbf;
 }
-/* todo Burger menu */
+/* | Burger menu */
 .open {
   display: flex !important;
 }
@@ -188,17 +188,72 @@ footer > h3 {
 }
 
 @media only screen and (max-width: 992px) {
+  /* | Main */
+  .parallax-content > h1 {
+    font-size: 32px;
+  }
+  .parallax-content > p {
+    width: 70vw;
+    font-size: 22px;
+    padding: 30px;
+  }
 }
 @media only screen and (max-width: 600px) {
+  /* | header */
+  .nav__links > li > a {
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    transition: 0.3s;
+  }
+  /* | Main */
+  .parallax-content > h1 {
+    font-size: 30px;
+  }
+  .parallax-content > p {
+    width: 80vw;
+    font-size: 20px;
+    padding: 30px;
+  }
+  /* | footer */
+  footer {
+    height: 200px;
+    background: rgb(104, 104, 104);
+    position: relative;
+  }
+  footer > h3 {
+    position: absolute;
+    left: 20%;
+    top: 20px;
+  }
+  .footer__links {
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .inFooter{
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
   body.lock {
     overflow: hidden;
   }
-
+  /* | header */
+  .nav__links > li > a {
+    color: #fff;
+    font-size: 25px;
+    padding: 20px;
+    transition: 0.3s;
+  }
   /* 
   | nav
-  ? Burger 
+  | Burger 
   */
   .nav__links {
     position: fixed;
@@ -231,13 +286,13 @@ footer > h3 {
 
     right: 2%;
   }
-  /* todo Main */
+  /* | Main */
   .parallax-content > h1 {
-  font-size: 28px;
-}
-.parallax-content > p {
-  width: 80vw;
-  font-size: 18px;
-  padding: 30px;
-}
+    font-size: 28px;
+  }
+  .parallax-content > p {
+    width: 80vw;
+    font-size: 18px;
+    padding: 30px;
+  }
 }

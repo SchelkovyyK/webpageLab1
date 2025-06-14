@@ -34,6 +34,7 @@ function sendMeSwitcher() {
     sendMeSwitch.style = "background: rgb(0, 186, 46);";
   }
 }
+sendMeSwitch.addEventListener("click", sendMeSwitcher)
 function timerSender(milli) {
   setTimeout(() => {
     if (!sendMe) return;
@@ -64,6 +65,6 @@ slides.addEventListener("transitionend", () => {
     slides.style.transform = `translateX(-${index * 100}%)`;
   }
 });
-import {Burger} from './burger.js';
+import { Burger } from "./burger.js";
 
-Burger()
+Burger();

@@ -1,5 +1,5 @@
 .contact-form {
-  max-width: 50vw;
+  max-width: 60vw;
   margin: 50px auto;
   background-color: #626262;
   padding: 30px;
@@ -64,4 +64,13 @@
 
 .contact-form__button:hover {
   background-color: rgb(61, 29, 0);
+}
+@media only screen and (max-width: 600px){
+  .contact-form {
+  max-width: 80vw;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
 }
