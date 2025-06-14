@@ -1,5 +1,7 @@
 main {
   margin: 0 auto;
+  overflow: visible !important;
+  position: relative; 
 }
 #movies {
   width: 90vw;
@@ -7,15 +9,21 @@ main {
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  
 }
 #movies > div {
   border: 1px solid black;
   text-align: center;
+  background: rgb(107, 107, 107);
 }
 #movies > div > img {
   width: 100%;
 }
+#movies .title{
+padding: 10px;
+}
+
 #loadMoreBtn {
   padding: 20px;
   font-size: 30px;
@@ -27,6 +35,8 @@ main {
 }
 
 .main__searcher {
+  position: sticky;
+  top:-80px;
   width: 90vw;
   margin: 0 auto;
   background: rgb(111, 111, 111);
@@ -46,4 +56,46 @@ main {
 }
 .hide {
   display: none;
+}@media only screen and (max-width: 992px) {
+  #movies {
+  width: 90vw;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 20px;
+  /* overflow: hidden; */
+  
+}
+}
+@media only screen and (max-width: 600px) {
+  #movies {
+  width: 90vw;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1fr));
+  gap: 20px;
+  /* overflow: hidden; */
+  
+}
+}
+@media only screen and (max-width: 480px){
+  #movies {
+  width: 90vw;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(250px, 1fr));
+  gap: 20px;
+  overflow: hidden;
+}
+#movies .title>p {
+  font-size:14px ;
+}
+/* todo search bar */
+.main__searcher {
+  width: 100vw;
+  background: rgb(111, 111, 111);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
 }

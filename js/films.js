@@ -46,8 +46,10 @@ function createMovieCard(media) {
     <img src="https://image.tmdb.org/t/p/w500${backdrop_path}" class="movie_img_rounded" alt="${
     title || name
   }">
-    <h2 class="title">${title || name}</h2>
+  <div class="title">
+    <h2>${title || name}</h2>
     <p>${overview}</p>
+  </div>
   `;
 
   return movieCard;
@@ -59,7 +61,6 @@ loadMoreBtn.addEventListener("click", () => {
   fetchMovies(currentPage);
 });
 console.log(allMovies);
-
 
 // | Searcher
 searchInput.addEventListener("input", (e) => {
@@ -73,3 +74,7 @@ searchInput.addEventListener("input", (e) => {
     movie.element.classList.toggle("hide", !isVisible);
   });
 });
+
+import { Burger } from "./burger.js";
+
+Burger();

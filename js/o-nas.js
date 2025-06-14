@@ -64,3 +64,6 @@ slides.addEventListener("transitionend", () => {
     slides.style.transform = `translateX(-${index * 100}%)`;
   }
 });
+import {Burger} from './burger.js';
+
+Burger()

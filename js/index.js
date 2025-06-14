@@ -15,3 +15,7 @@ box.addEventListener("mousemove", (e) => {
 box.addEventListener("mouseleave", () => {
   box.style.backgroundPosition = "center";
 });
+
+import {Burger} from './burger.js';
+
+Burger()
