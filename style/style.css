@@ -111,7 +111,7 @@ main {
   overflow: hidden;
   background-image: url("https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   /* ? background-size */
-  background-size: 110vw 900px;
+  background-size: 110vw 110vh;
   background-position: center;
   transition: background-position 0.2s ease;
   background-repeat: no-repeat;

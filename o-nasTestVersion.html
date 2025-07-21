@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- <link rel="stylesheet" href="style/o-nas.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom styles -->
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .main__aboutUs {
+        text-align: center;
+        margin: 20px;
+      }
+
+      .main__aboutUs > h2 {
+        margin-bottom: 20px;
+      }
+
+      .main__aboutUs > p {
+        font-size: 24px;
+      }
+
+      .swiper {
+        width: 80vw;
+        height: 60vh;
+        margin: 30px auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 50%;
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+
+      .swiper:hover .swiper-button-next,
+      .swiper:hover .swiper-button-prev {
+        opacity: 0.3;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: white;
+        opacity: 0.5;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+
+      @media (max-width: 996px) {
+        .swiper {
+          width: 60vw;
+          height: 50vh;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .main__aboutUs > p {
+          font-size: 18px;
+        }
+
+        .swiper {
+          width: 80vw;
+          height: 50vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header role="header">
+      <ul role="navigation" class="nav__links">
+        <li><a href="index.html">Movie Atlas</a></li>
+        <li><a href="films.html">Films</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
+        <li><a href="o-nas.html">About Us</a></li>
+        <li><a href="o-nasTestVersion.html">Test file</a></li>
+      </ul>
+      <div role="navigationBurerButton" class="burgerB">
+        <span></span>
+      </div>
+    </header>
+    <section class="main__aboutUs">
+      <h2>About Us</h2>
+      <p>Welcome to our slider demo using Swiper.js</p>
+    </section>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1015/800/600" alt="Slide 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1016/800/600" alt="Slide 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1018/800/600" alt="Slide 3" />
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper Init -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

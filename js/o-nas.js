@@ -65,6 +65,24 @@ slides.addEventListener("transitionend", () => {
     slides.style.transform = `translateX(-${index * 100}%)`;
   }
 });
+const fullScreenBtn = document.querySelector(".fullScreenButton");
+const slider = document.querySelector(".slider");
+console.log(fullScreenBtn ? true : false)
+fullScreenBtn.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    slider.requestFullscreen().catch((err) => {
+      console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+  console.log("trigered");
+});
+
+addEventListener("DOMContentLoaded", console.log(fullScreenBtn ? true : false) )
 import { Burger } from "./burger.js";
 
 Burger();
+
+
+

@@ -8,8 +8,8 @@
 .main__aboutUs > p {
   font-size: 24px;
 }
-.sendMeSwitcher{
-  margin-top:20px ;
+.sendMeSwitcher {
+  margin-top: 20px;
   padding: 10px;
   color: #fff;
   transition: 0.5s;
@@ -52,6 +52,8 @@ button.next {
   cursor: pointer;
   z-index: 10;
   border-radius: 30%;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 button.prev {
@@ -60,34 +62,91 @@ button.prev {
 button.next {
   right: 10px;
 }
-
-
-@media only screen and (max-width: 996px){
-  
-.slider {
-  position: relative;
-  width: 60vw;
-  height: 50vh;
-  margin: 30px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.fullScreenButton {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 30%;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0;
+  transition: opacity 500ms;
 }
+:fullscreen .slider {
+  width: 100vw;
+  height: 100vh;
 }
-@media only screen and (max-width: 600px){
+
+:fullscreen .slide img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider:hover > button.prev,
+.slider:hover > button.next,
+.slider:hover > .fullScreenButton {
+  opacity: 0.3;
+}
+.slider:hover > button.prev:hover,
+.slider:hover > button.next:hover,
+.slider:hover > .fullScreenButton:hover {
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 2000px) {
+  .fullScreenButton {
+    right: 30px;
+    bottom: 10%;
+    font-size: 60px; /* збільш шрифт */
+    padding: 20px; /* зроби більшим */
+  }
+
+  button.prev,
+  button.next {
+    font-size: 60px;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* залиш тільки вирівнювання */
+  }
+
+  button.prev {
+    left: 30px;
+  }
+
+  button.next {
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .slider {
+    position: relative;
+    width: 60vw;
+    height: 50vh;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+}
+@media only screen and (max-width: 600px) {
   .main__aboutUs > h2 {
-  margin-bottom: 10px;
-}
-.main__aboutUs > p {
-  font-size: 18px;
-}
-.slider {
-  position: relative;
-  width: 80vw;
-  height: 50vh;
-  margin: 30px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
+    margin-bottom: 10px;
+  }
+  .main__aboutUs > p {
+    font-size: 18px;
+  }
+  .slider {
+    position: relative;
+    width: 80vw;
+    height: 50vh;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 }
