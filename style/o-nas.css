@@ -27,18 +27,15 @@
 
 .slides {
   display: flex;
-  transition: transform 0.7s ease;
-}
-
-.slide {
-  min-width: 100%;
 }
 
 .slide img {
   width: 100%;
-  height: 60vh;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Navigation buttons */
 button.prev,
 button.next {
   position: absolute;
@@ -55,6 +52,16 @@ button.next {
   opacity: 0;
   transition: opacity 500ms;
 }
+.slider:hover button.prev,
+.slider:hover button.next,
+.slider:hover .fullScreenButton {
+  opacity: 0.3;
+}
+.slider:hover button.prev:hover,
+.slider:hover button.next:hover,
+.slider:hover .fullScreenButton:hover {
+  opacity: 1;
+}
 
 button.prev {
   left: 10px;
@@ -62,8 +69,11 @@ button.prev {
 button.next {
   right: 10px;
 }
+
 .fullScreenButton {
   position: absolute;
+  right: 10px;
+  bottom: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -72,30 +82,29 @@ button.next {
   cursor: pointer;
   z-index: 10;
   border-radius: 30%;
-  right: 10px;
-  bottom: 10px;
   opacity: 0;
   transition: opacity 500ms;
 }
+
+/* Fullscreen mode */
 :fullscreen .slider {
   width: 100vw;
   height: 100vh;
 }
-
 :fullscreen .slide img {
   height: 100vh;
   object-fit: cover;
 }
-
-.slider:hover > button.prev,
-.slider:hover > button.next,
-.slider:hover > .fullScreenButton {
-  opacity: 0.3;
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  opacity: 0.5;
 }
-.slider:hover > button.prev:hover,
-.slider:hover > button.next:hover,
-.slider:hover > .fullScreenButton:hover {
-  opacity: 1 !important;
+
+.swiper-pagination-bullet-active {
+  background: rgb(0, 118, 186);
+  opacity: 1;
 }
 @media only screen and (min-width: 2000px) {
   .fullScreenButton {
